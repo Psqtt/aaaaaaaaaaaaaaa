@@ -1,4 +1,4 @@
-# Jotion - Fullstack Notion Clone
+# NEXUS
 
 ![Jotion Logo](./public/logo.svg?theme=light)
 ![Jotion Logo](./public/logo-dark.svg?theme=dark)
