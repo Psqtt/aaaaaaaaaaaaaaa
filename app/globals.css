@@ -69,6 +69,87 @@ body,
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
   }
+
+  /* Custom Accent Colors */
+  html[data-accent="indigo"] {
+    --primary: 239 84% 67%;
+    --ring: 239 84% 67%;
+  }
+  html[data-accent="emerald"] {
+    --primary: 158 64% 45%;
+    --ring: 158 64% 45%;
+  }
+  html[data-accent="violet"] {
+    --primary: 263 70% 50%;
+    --ring: 263 70% 50%;
+  }
+  html[data-accent="amber"] {
+    --primary: 38 92% 50%;
+    --ring: 38 92% 50%;
+  }
+  html[data-accent="rose"] {
+    --primary: 346 87% 55%;
+    --ring: 346 87% 55%;
+  }
+  html[data-accent="cyan"] {
+    --primary: 189 94% 43%;
+    --ring: 189 94% 43%;
+  }
+  html[data-accent="orange"] {
+    --primary: 24 95% 53%;
+    --ring: 24 95% 53%;
+  }
+  html[data-accent="sapphire"] {
+    --primary: 217 91% 60%;
+    --ring: 217 91% 60%;
+  }
+
+  /* Border Radius Presets */
+  html[data-radius="sharp"] {
+    --radius: 0rem;
+  }
+  html[data-radius="subtle"] {
+    --radius: 0.35rem;
+  }
+  html[data-radius="rounded"] {
+    --radius: 0.75rem;
+  }
+  html[data-radius="pill"] {
+    --radius: 1.25rem;
+  }
+
+  /* Background Texture Patterns */
+  html[data-pattern="dots"] body {
+    background-image: radial-gradient(rgba(120, 120, 120, 0.18) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  html[data-pattern="grid"] body {
+    background-image: linear-gradient(to right, rgba(120, 120, 120, 0.08) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(120, 120, 120, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  html[data-pattern="mesh"] body {
+    background-image: radial-gradient(at 10% 20%, rgba(99, 102, 241, 0.07) 0px, transparent 50%),
+                      radial-gradient(at 90% 80%, rgba(236, 72, 153, 0.07) 0px, transparent 50%);
+  }
+
+  /* Dark Theme Variants */
+  html.dark[data-dark-variant="oled"] body,
+  html.dark[data-dark-variant="oled"] aside,
+  html.dark[data-dark-variant="oled"] .dark\:bg-\[\#1F1F1F\] {
+    background-color: #000000 !important;
+  }
+  html.dark[data-dark-variant="midnight"] body,
+  html.dark[data-dark-variant="midnight"] aside,
+  html.dark[data-dark-variant="midnight"] .dark\:bg-\[\#1F1F1F\] {
+    background-color: #0a0e17 !important;
+  }
+
+  /* Glassmorphism Blur */
+  html[data-glass="true"] aside {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
 }
 
 @layer base {

@@ -8,12 +8,14 @@ import { ModalProvider } from "@/components/providers/modal-provider";
 
 import "./globals.css";
 import { EdgeStoreProvider } from "@/lib/edgestore";
+import { LanguageProvider } from "@/hooks/use-language";
+import { ResizeObserverProvider } from "@/components/providers/resize-observer-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jotion",
-  description: "Connected workspace where better,faster work happens.",
+  title: "Nexus",
+  description: "Connected workspace where better, faster work happens.",
   icons: {
     icon: [
       {
@@ -45,11 +47,15 @@ export default function RootLayout({
               defaultTheme="system"
               enableSystem
               disableTransitionOnChange
-              storageKey="jotion-theme-2"
+              storageKey="nexus-theme-2"
             >
-              <Toaster position="bottom-center" />
-              <ModalProvider />
-              {children}
+              <LanguageProvider>
+                <ResizeObserverProvider>
+                  <Toaster position="bottom-center" />
+                  <ModalProvider />
+                  {children}
+                </ResizeObserverProvider>
+              </LanguageProvider>
             </ThemeProvider>
           </EdgeStoreProvider>
         </ConvexClientProvider>

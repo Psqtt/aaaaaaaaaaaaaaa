@@ -19,7 +19,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@clerk/clerk-react": ["./lib/mock-clerk.tsx"],
+      "convex/react": ["./lib/mock-convex.tsx"],
+      "convex/react-clerk": ["./lib/mock-convex-clerk.tsx"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

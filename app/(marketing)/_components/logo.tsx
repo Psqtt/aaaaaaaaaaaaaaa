@@ -12,19 +12,23 @@ const Logo = () => {
     <div className="hidden md:flex items-center gap-x-2">
       <Image
         src="/logo.svg"
-        height="40"
-        width="40"
-        alt="Logo"
+        height="32"
+        width="32"
+        alt="Nexus Logo"
+        priority
         className="dark:hidden"
       />
       <Image
         src="/logo-dark.svg"
-        height="40"
-        width="40"
-        alt="Logo"
+        height="32"
+        width="32"
+        alt="Nexus Logo"
+        priority
         className="hidden dark:block"
       />
-      <p className={cn("font-semibold", font.className)}>Jotion</p>
+      <p className={cn("font-semibold text-lg tracking-tight", font.className)}>
+        Nexus
+      </p>
     </div>
   );
 };
